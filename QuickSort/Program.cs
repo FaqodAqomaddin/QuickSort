@@ -102,7 +102,24 @@ namespace QuickSort
                 Console.WriteLine(arr[j]);
             }
             Console.WriteLine("\nNumber of comparisons: " + cmp_count);
-            Console.WriteLine("\nNumber of data movements: " + mov_count);
+            Console.WriteLine("\nNumber of data movemenets: " + mov_count);
         }
+
+        int getSize()
+        {
+            return (n);
+        }
+
+        static void Main(string[] args)
+        {
+            Program myList = new Program();
+            myList.input();
+            myList.q_sort(0, myList.getSize() -1);
+            myList.display();
+
+            Console.WriteLine("\n\nPress Enter to exit.");
+            Console.Read();
+        }
+
     }
 }
